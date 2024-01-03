@@ -1,0 +1,37 @@
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+     <h1>WELCOME TO MY BLOG PAGE</h1>
+  <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/admin/dashboard">Admin Dashboard</a>
+      <a href="/admin/addBlog">Add New Blog</a>
+    </nav></header>
+  <center><h1>Add New Blog</h1>
+  
+  <br>
+  <form action="/addBlog" method="post">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+    <br>
+    <label for="caption">Caption:</label>
+    <input type="text" id="caption" name="caption" required>
+    <br>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" required>
+    <br>
+    <button type="submit">Add Blog</button></center>
+  </form>
+</body>
+</html>

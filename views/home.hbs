@@ -1,0 +1,50 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+      <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+        <h1>MY BLOG WEBSITE</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/admin/dashboard">Dashboard</a>
+    <a href="/admin/addBlog">Add Blog</a>
+     
+    <select id="categoryDropdown" onchange="filterBlogs()">
+      <option value="all">All Blogs</option>
+      <option value="lifestyle">Lifestyle</option>
+      <option value="Nature">Nature</option>
+      <option value="fashion">Fashion</option>
+      <option value="yoga">Yoga</option>
+      
+    </select>
+  </nav>
+
+  <h1>WELCOME TO MY BLOG PAGE</h1>
+</header><center>
+<div class="container">
+  {{#each blogs}}
+    <div class="blog-card">
+      <h2>Title:{{title}}</h2>
+      <p>{{description}}</p>
+       <p>Category: {{category}}</p>
+    </div>
+  {{/each}}
+</div></center>
+
+  <script>
+    // JavaScript function to filter blogs based on selected category
+    function filterBlogs() {
+      const selectedCategory = document.getElementById('categoryDropdown').value;
+      window.location.href = `/blogsByCategory?category=${selectedCategory}`;
+    }
+  </script>
+</body>
+</html>
